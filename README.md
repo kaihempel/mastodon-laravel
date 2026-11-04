@@ -11,7 +11,7 @@ Laravel-Client für die Mastodon-REST-API mit Schwerpunkt auf dem Veröffentlich
 - Validierung gegen die Limits der jeweiligen Instanz, bevor ein Request rausgeht
 - Fehler-, Rate-Limit- und Retry-Behandlung, Idempotenz, Events, Jobs, Test-Fake
 
-**Voraussetzungen:** PHP 8.3+, Laravel 12.
+**Voraussetzungen:** PHP 8.3+, Laravel 12 oder 13.
 
 ## Installation
 
@@ -146,13 +146,13 @@ composer install
 vendor/bin/phpunit
 ```
 
-Die GitHub Action `.github/workflows/tests.yml` führt die Tests mit PHP 8.3 und 8.4 gegen Laravel 12 aus (jeweils mit niedrigsten und aktuellen Abhängigkeiten).
+Die GitHub Action `.github/workflows/tests.yml` führt die Tests mit PHP 8.3 und 8.4 gegen Laravel 12 und 13 aus (jeweils mit niedrigsten und aktuellen Abhängigkeiten).
 
 ## Umgesetzte Entscheidungen
 
 Die offenen Punkte aus der Spezifikation (Abschnitt 16) sind so umgesetzt:
 
-1. Paket `kaihempel/mastodon-laravel`, Namespace `KaiHempel\Mastodon`, PHP 8.3+, Laravel 12.
+1. Paket `kaihempel/mastodon-laravel`, Namespace `KaiHempel\Mastodon`, PHP 8.3+, Laravel 12/13.
 2. Routen und Controller werden mitgeliefert, sind aber abschaltbar; der `AuthorizationFlow` ist eigenständig nutzbar.
 3. Planung standardmäßig serverseitig (`scheduled_at`); lokale Planung über einen eigenen verzögerten `PublishStatusJob`.
 4. Medien nur aus erlaubten Disks und Pfaden, nicht aus URLs.
