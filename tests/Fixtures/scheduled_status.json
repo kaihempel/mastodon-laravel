@@ -1,0 +1,17 @@
+{
+  "id": "3221",
+  "scheduled_at": "2026-11-04T14:00:00.000Z",
+  "params": {
+    "poll": null,
+    "text": "Neue Version ist da #release",
+    "media_ids": null,
+    "sensitive": null,
+    "visibility": null,
+    "idempotency": "5f2b8c2e-1b0a-4a6a-9c5e-1f1f1f1f1f1f",
+    "scheduled_at": null,
+    "spoiler_text": null,
+    "application_id": 596551,
+    "in_reply_to_id": null
+  },
+  "media_attachments": []
+}

@@ -1,0 +1,56 @@
+{
+    "name": "kaihempel/mastodon-laravel",
+    "description": "Laravel client package for the Mastodon REST API: instance discovery, OAuth with PKCE, media upload, publishing and scheduled statuses.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "laravel",
+        "mastodon",
+        "fediverse",
+        "activitypub",
+        "social-media",
+        "api-client"
+    ],
+    "authors": [
+        {
+            "name": "Kai Hempel"
+        }
+    ],
+    "require": {
+        "php": "^8.3",
+        "guzzlehttp/guzzle": "^7.8",
+        "laravel/framework": "^12.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^10.0",
+        "phpunit/phpunit": "^11.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "KaiHempel\\Mastodon\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "KaiHempel\\Mastodon\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "KaiHempel\\Mastodon\\MastodonServiceProvider"
+            ],
+            "aliases": {
+                "Mastodon": "KaiHempel\\Mastodon\\Facades\\Mastodon"
+            }
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
